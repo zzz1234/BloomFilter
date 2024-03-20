@@ -24,7 +24,7 @@ pip install -r requirements.txt
 To create a Bloom filter, you can use the create_bloom_filter.py script with the following command line parameters:
 
 ```bash
-python create_bloom_filter.py --file <input_file> --binary_file <output_binary_file>
+python main.py --file <input_file> --binary_file <output_binary_file>
 
 ```
 
@@ -34,7 +34,7 @@ python create_bloom_filter.py --file <input_file> --binary_file <output_binary_f
 Example:
 
 ```bash
-python create_bloom_filter.py --file words.txt --binary_file bloom_filter.bin
+python main.py --file words.txt --binary_file bloom_filter.bf
 ```
 
 ## Validating Words using Bloom Filter
@@ -43,7 +43,7 @@ To validate a line of words using the Bloom filter, you can use the validate_blo
 
 
 ```bash
-python validate_bloom_filter.py --binary_file <input_binary_file> --line <words_to_check>
+python main.py --binary_file <input_binary_file> --line <words_to_check>
 ```
 
 - `--binary_file`: Path to the binary file containing the Bloom filter.
@@ -52,6 +52,6 @@ python validate_bloom_filter.py --binary_file <input_binary_file> --line <words_
 Example:
 
 ```bash
-python validate_bloom_filter.py --binary_file bloom_filter.bin --line "hello world example"
+python validate_bloom_filter.py --binary_file bloom_filter.bf --line "hello world example"
 ```
 
